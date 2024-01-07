@@ -2,7 +2,6 @@ let express = require("express");
 let app = express();
 let path = require("path"); 
 let multer = require("multer");
-
 const uuid = require('uuid');
 const superagent = require("superagent");
 const recentFiles = [];
@@ -157,18 +156,6 @@ app.get("/projects",(req,res) => {
     hidden.forEach((el) =>  oberv.observe(el))
     </script>
   `)
-})
-app.get("/api/v2/fb-download_vid",(req,res) => {
-  const { facebook } = require("fy-downloader");
-  let url = req.query.url
-facebook(url, (err, data) => {
-  if(err != null){
- res.json({err: err})
-  } else {
-    res.json({data: data})
-  }
-});
-
 })
 app.post('/api/v1/upload',   upload.single('file'),async (req, res) => {
 
