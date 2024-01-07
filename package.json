@@ -17,8 +17,7 @@
     "uuid": "^9.0.1"
   },
   "engines": {
-    "node": "20.x"
+    "node": "20"
   },
   "license": "MIT"
 }
-
