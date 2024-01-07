@@ -4,6 +4,7 @@
   "scripts": {
     "start": "node index.js"
   },
+  
   "dependencies": {
     "aws-sdk": "^2.1473.0",
     "axios": "^1.4.0",
@@ -40,7 +41,8 @@
     "yt-get": "^1.1.2"
   },
   "engines": {
-    "node": "18.x"
+    "node": "16"
   },
   "license": "MIT"
 }
+
