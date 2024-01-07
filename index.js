@@ -6,11 +6,7 @@ let multer = require("multer");
 const uuid = require('uuid');
 const superagent = require("superagent");
 const recentFiles = [];
-let fs = require("fs")
 const fileUpload = require('express-fileupload');
-//discord js stuff
-const client = new Discord.Client();
-const token = 'MTE0Nzg2Mzc2MjA5NTg0NTQwNg.Gd3vEf.jvE0QZfJNVmZDfY9vTMZZBa1GqOfNjQChHr7RY';
 let year = "2024";
 //this code upload file uh stuf like that
 const storage = multer.diskStorage({
@@ -421,41 +417,44 @@ app.post("/api/v2/discord-cdn/fileuploading",async(req,res) => {
          res.status(500).send('An error occurred while sending the file.');
        });
    });
-app.get("/rel/wat/fileuploading/2",(req,res) => {
-  res.send(`
-  <head>
-  <title>Blak man uploading pro file niga</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<h1>File Uploading v2 </h1>
-<form action="/api/v2/discord-cdn/fileuploading" method="POST" enctype="multipart/form-data">
-  <input style="font-size: 30px; border: none; border-radius: 5px; "  type="file" name="file" required><br><br>
-  <button class="btn" type="submit">Upload</button>
-</form>
-</body>
-<style>
-  body{
-      background-color: #000;
-      color: #fff;
-      font-family: 'Roboto',sans-serif;
-  }
-  .btn{
-      padding: 4px 8px;
-  color: var(--fg);
-  font-weight: 500;
-  transition: all .2s ease;
-  cursor: pointer;
-  background-color: #161923;
-  border: none;
-  font-size: 30px;
-  border-radius: 5px;
-  }.btn:hover{background-color: #f40552;}
-</style>
+
+//
+   //app.get("/rel/wat/fileuploading/2",(req,res) => {
+ // res.send(`
+ // <head>
+ // <title>Blak man uploading pro file niga</title>
+ // <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ //</head>
+//<body>
+//<h1>File Uploading v2 </h1>
+//<form action="/api/v2/discord-cdn/fileuploading" method="POST" enctype="multipart/form-data">
+ // <input style="font-size: 30px; border: none; border-radius: 5px; "  type="file" name="file" required><br><br>
+ // <button class="btn" type="submit">Upload</button>
+//</form>
+//</body>
+//<style>
+  //body{
+  //    background-color: #000;
+      //color: #fff;
+   //   font-family: 'Roboto',sans-serif;
+  //}
+//  .btn{
+      //padding: 4px 8px;
+ //color: var(--fg);
+  //font-weight: 500;
+ // transition: all .2s ease;
+ // cursor: pointer;
+ // background-color: #161923;
+  //border: none;
+ // font-size: 30px;
+//  border-radius: 5px;
+ // }.btn:hover{background-color: #f40552;}
+//</style>
 
 
-  `)
-})
+  //`)
+//})
+
 app.get("/docs/api",(req,res) => {
   res.send("soon")
 })
