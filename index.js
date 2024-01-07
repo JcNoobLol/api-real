@@ -2,14 +2,11 @@ let express = require("express");
 let app = express();
 let path = require("path"); 
 let multer = require("multer");
-let axios  =  require("axios");
-const fse = require("fs-extra")
+
 const uuid = require('uuid');
 const superagent = require("superagent");
 const recentFiles = [];
 let fs = require("fs")
-let Discord = require("discord.js")
-let cloudinary = require("cloudinary").v2;
 const fileUpload = require('express-fileupload');
 //discord js stuff
 const client = new Discord.Client();
